@@ -33,7 +33,7 @@ function getBotResponse(input) {
         }
     }
 
-    if(diagnosis(input) == "no"){
+    if(tokenizer(input) == "no"){
         finish = true;
         return diagnosis();
     }
