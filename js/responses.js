@@ -11,21 +11,21 @@ function getBotResponse(input) {
     console.log(tokenizer(input));
     if(st_time){
         st_time = false;
-        return "แล้วเคยมีอาการ" + symptom_text[round] + "หรือป่าวคะ"+ 0;
+        return "แล้วเคยมีอาการ" + symptom_text[round] + "หรือป่าวคะ";
     }
     while(round < 2){
         if(tokenizer(input) == "no"){
             round = round + 1;
-            return "เคยมีอาการ" + symptom_text[round] + "หรือป่าวคะ" + 1;
+            return "เคยมีอาการ" + symptom_text[round] + "หรือป่าวคะ";
         }
         else if(tokenizer(input) == "yes"){
             symptom = 1
             round = round + 1;
             if(round < 2){
-                return "เคยมีอาการ" + symptom_text[round] + "หรือป่าวคะ" + 2;
+                return "เคยมีอาการ" + symptom_text[round] + "หรือป่าวคะ";
             }
             else{
-                return "มีอาการอะไรเพิ่มเติมหรือป่าวคะ บอกมาได้เลยค่ะ" + 3;
+                return "มีอาการอะไรเพิ่มเติมหรือป่าวคะ บอกมาได้เลยค่ะ";
             }
         }
         else{
